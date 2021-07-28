@@ -4,5 +4,10 @@ let vapidKeys = {
     privateKey: 'saSaoYzjdcpQ_XTi75dcY3D2cXDLXnmcM6YyjosFvWE'
   }
   push.setVapidDetails('mailto:test@code.in',vapidKeys.publicKey,vapidKeys.privateKey)
-  let sub ={};
-  push.sendNotification(sub,'test message')
+  const pushSubscription = {
+      endpoint:'...',
+      keys:{
+          auth:'....',
+          p2256dh:'...'
+  }};
+  push.sendNotification(pushSubscription,'Payload text');
